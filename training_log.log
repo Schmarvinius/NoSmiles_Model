@@ -1,0 +1,237 @@
+2025-05-05 21:49:54,633 [INFO] Logging to console and training_log.log
+2025-05-05 21:49:56,082 [INFO] Random seed set to 42
+2025-05-05 21:49:56,083 [INFO] Loading data from fer2013.csv
+2025-05-05 21:50:25,393 [INFO] Logging to console and training_log.log
+2025-05-05 21:50:27,050 [INFO] Random seed set to 42
+2025-05-05 21:50:27,050 [INFO] Loading data from fer2013.csv
+2025-05-05 21:50:29,428 [INFO] Loaded 32298 samples for Training/Validation
+2025-05-05 21:50:29,428 [INFO] Loaded 3589 samples for Final Testing
+2025-05-05 21:50:29,430 [INFO] Class counts (Train/Val): {0: 24188, 1: 8110}
+2025-05-05 21:50:29,430 [INFO] Calculated class weights: [0.6676451 1.9912454]
+2025-05-05 21:50:29,431 [INFO] Using device: cuda
+2025-05-05 21:50:29,431 [INFO] Using 4 workers for DataLoaders
+2025-05-05 21:50:29,434 [INFO] --- Starting Fold 1/5 ---
+2025-05-05 21:50:29,793 [INFO] Using Mixed Precision (AMP) with torch.amp.GradScaler
+2025-05-05 21:50:29,794 [INFO] --- Phase 1: Training Head ---
+2025-05-05 21:51:51,199 [INFO] Fold 1 Phase 1 - Epoch 1/3, Train Loss: 0.6195, Time: 81.40s
+2025-05-05 21:53:11,796 [INFO] Fold 1 Phase 1 - Epoch 2/3, Train Loss: 0.6139, Time: 80.60s
+2025-05-05 21:54:32,573 [INFO] Fold 1 Phase 1 - Epoch 3/3, Train Loss: 0.6111, Time: 80.78s
+2025-05-05 21:54:32,574 [INFO] --- Phase 2: Fine-tuning Full Model ---
+2025-05-05 22:00:47,052 [INFO] Fold 1 Phase 2 - Epoch 1/7 (Total: 4), LR: [1e-05, 0.001], Train Loss: 0.5120, Val Loss: 0.3709, Val Acc: 0.8534, Val F1: 0.7297, Val AUC: 0.9141, Time: 374.48s
+2025-05-05 22:00:47,279 [INFO]   -> New best F1: 0.7297 at epoch 4. Checkpoint saved to models_checkpointed/best_model_fold_1.pth
+2025-05-05 22:07:01,756 [INFO] Fold 1 Phase 2 - Epoch 2/7 (Total: 5), LR: [1e-05, 0.001], Train Loss: 0.4017, Val Loss: 0.3174, Val Acc: 0.8827, Val F1: 0.7800, Val AUC: 0.9383, Time: 374.48s
+2025-05-05 22:07:02,000 [INFO]   -> New best F1: 0.7800 at epoch 5. Checkpoint saved to models_checkpointed/best_model_fold_1.pth
+2025-05-05 22:13:16,399 [INFO] Fold 1 Phase 2 - Epoch 3/7 (Total: 6), LR: [1e-05, 0.001], Train Loss: 0.3541, Val Loss: 0.2982, Val Acc: 0.8642, Val F1: 0.7718, Val AUC: 0.9493, Time: 374.40s
+2025-05-05 22:13:16,400 [INFO]   -> F1 did not improve. Patience: 1/5
+2025-05-05 22:19:30,756 [INFO] Fold 1 Phase 2 - Epoch 4/7 (Total: 7), LR: [1e-05, 0.001], Train Loss: 0.3248, Val Loss: 0.2857, Val Acc: 0.9034, Val F1: 0.8163, Val AUC: 0.9518, Time: 374.36s
+2025-05-05 22:19:30,983 [INFO]   -> New best F1: 0.8163 at epoch 7. Checkpoint saved to models_checkpointed/best_model_fold_1.pth
+2025-05-05 22:25:45,376 [INFO] Fold 1 Phase 2 - Epoch 5/7 (Total: 8), LR: [1e-05, 0.001], Train Loss: 0.3011, Val Loss: 0.2665, Val Acc: 0.9015, Val F1: 0.8197, Val AUC: 0.9566, Time: 374.39s
+2025-05-05 22:25:45,608 [INFO]   -> New best F1: 0.8197 at epoch 8. Checkpoint saved to models_checkpointed/best_model_fold_1.pth
+2025-05-05 22:32:00,009 [INFO] Fold 1 Phase 2 - Epoch 6/7 (Total: 9), LR: [1e-05, 0.001], Train Loss: 0.2822, Val Loss: 0.2685, Val Acc: 0.8929, Val F1: 0.8082, Val AUC: 0.9569, Time: 374.40s
+2025-05-05 22:32:00,009 [INFO]   -> F1 did not improve. Patience: 1/5
+2025-05-05 22:38:14,422 [INFO] Fold 1 Phase 2 - Epoch 7/7 (Total: 10), LR: [1e-05, 0.001], Train Loss: 0.2615, Val Loss: 0.2589, Val Acc: 0.9062, Val F1: 0.8269, Val AUC: 0.9610, Time: 374.41s
+2025-05-05 22:38:14,648 [INFO]   -> New best F1: 0.8269 at epoch 10. Checkpoint saved to models_checkpointed/best_model_fold_1.pth
+2025-05-05 22:38:14,648 [INFO] Loading best model from models_checkpointed/best_model_fold_1.pth (Epoch 10, F1: 0.8269)
+2025-05-05 22:38:14,818 [INFO] --- Evaluating Best Model for Fold 1 ---
+2025-05-05 22:38:33,836 [INFO] Fold 1 Final Validation Results (Best Model):
+2025-05-05 22:38:33,836 [INFO]   Accuracy:  0.9062
+2025-05-05 22:38:33,836 [INFO]   F1 Score:  0.8269
+2025-05-05 22:38:33,836 [INFO]   Precision: 0.7705
+2025-05-05 22:38:33,836 [INFO]   Recall:    0.8921
+2025-05-05 22:38:33,837 [INFO]   AUC:       0.9610
+2025-05-05 22:38:33,837 [INFO]   Loss:      0.2589
+2025-05-05 22:38:33,837 [INFO]   Confusion Matrix:
+2025-05-05 22:38:33,837 [INFO] 
+[[4407  431]
+ [ 175 1447]]
+2025-05-05 22:38:33,837 [INFO] --- Fold 1 completed in 2884.40s ---
+2025-05-05 22:38:33,837 [INFO] --- Starting Fold 2/5 ---
+2025-05-05 22:38:33,979 [INFO] Using Mixed Precision (AMP) with torch.amp.GradScaler
+2025-05-05 22:38:33,979 [INFO] --- Phase 1: Training Head ---
+2025-05-05 22:39:55,940 [INFO] Fold 2 Phase 1 - Epoch 1/3, Train Loss: 0.6217, Time: 81.96s
+2025-05-05 22:41:18,223 [INFO] Fold 2 Phase 1 - Epoch 2/3, Train Loss: 0.6131, Time: 82.28s
+2025-05-05 22:42:39,919 [INFO] Fold 2 Phase 1 - Epoch 3/3, Train Loss: 0.6119, Time: 81.70s
+2025-05-05 22:42:39,919 [INFO] --- Phase 2: Fine-tuning Full Model ---
+2025-05-05 22:48:54,353 [INFO] Fold 2 Phase 2 - Epoch 1/7 (Total: 4), LR: [1e-05, 0.001], Train Loss: 0.5124, Val Loss: 0.4075, Val Acc: 0.7854, Val F1: 0.6730, Val AUC: 0.9086, Time: 374.43s
+2025-05-05 22:48:54,498 [INFO]   -> New best F1: 0.6730 at epoch 4. Checkpoint saved to models_checkpointed/best_model_fold_2.pth
+2025-05-05 22:55:08,880 [INFO] Fold 2 Phase 2 - Epoch 2/7 (Total: 5), LR: [1e-05, 0.001], Train Loss: 0.4053, Val Loss: 0.3373, Val Acc: 0.8560, Val F1: 0.7497, Val AUC: 0.9305, Time: 374.38s
+2025-05-05 22:55:09,120 [INFO]   -> New best F1: 0.7497 at epoch 5. Checkpoint saved to models_checkpointed/best_model_fold_2.pth
+2025-05-05 23:01:23,602 [INFO] Fold 2 Phase 2 - Epoch 3/7 (Total: 6), LR: [1e-05, 0.001], Train Loss: 0.3587, Val Loss: 0.3065, Val Acc: 0.8875, Val F1: 0.7898, Val AUC: 0.9442, Time: 374.48s
+2025-05-05 23:01:23,829 [INFO]   -> New best F1: 0.7898 at epoch 6. Checkpoint saved to models_checkpointed/best_model_fold_2.pth
+2025-05-05 23:07:38,235 [INFO] Fold 2 Phase 2 - Epoch 4/7 (Total: 7), LR: [1e-05, 0.001], Train Loss: 0.3311, Val Loss: 0.2871, Val Acc: 0.9011, Val F1: 0.8101, Val AUC: 0.9512, Time: 374.41s
+2025-05-05 23:07:38,478 [INFO]   -> New best F1: 0.8101 at epoch 7. Checkpoint saved to models_checkpointed/best_model_fold_2.pth
+2025-05-05 23:13:52,843 [INFO] Fold 2 Phase 2 - Epoch 5/7 (Total: 8), LR: [1e-05, 0.001], Train Loss: 0.3041, Val Loss: 0.2708, Val Acc: 0.8844, Val F1: 0.7936, Val AUC: 0.9553, Time: 374.36s
+2025-05-05 23:13:52,843 [INFO]   -> F1 did not improve. Patience: 1/5
+2025-05-05 23:20:07,298 [INFO] Fold 2 Phase 2 - Epoch 6/7 (Total: 9), LR: [1e-05, 0.001], Train Loss: 0.2851, Val Loss: 0.2753, Val Acc: 0.9118, Val F1: 0.8296, Val AUC: 0.9570, Time: 374.45s
+2025-05-05 23:20:07,539 [INFO]   -> New best F1: 0.8296 at epoch 9. Checkpoint saved to models_checkpointed/best_model_fold_2.pth
+2025-05-05 23:26:21,940 [INFO] Fold 2 Phase 2 - Epoch 7/7 (Total: 10), LR: [1e-05, 0.001], Train Loss: 0.2679, Val Loss: 0.2577, Val Acc: 0.9091, Val F1: 0.8295, Val AUC: 0.9607, Time: 374.40s
+2025-05-05 23:26:21,940 [INFO]   -> F1 did not improve. Patience: 1/5
+2025-05-05 23:26:21,940 [INFO] Loading best model from models_checkpointed/best_model_fold_2.pth (Epoch 9, F1: 0.8296)
+2025-05-05 23:26:22,178 [INFO] --- Evaluating Best Model for Fold 2 ---
+2025-05-05 23:26:41,149 [INFO] Fold 2 Final Validation Results (Best Model):
+2025-05-05 23:26:41,149 [INFO]   Accuracy:  0.9118
+2025-05-05 23:26:41,149 [INFO]   F1 Score:  0.8296
+2025-05-05 23:26:41,149 [INFO]   Precision: 0.8051
+2025-05-05 23:26:41,149 [INFO]   Recall:    0.8557
+2025-05-05 23:26:41,149 [INFO]   AUC:       0.9570
+2025-05-05 23:26:41,149 [INFO]   Loss:      0.2753
+2025-05-05 23:26:41,149 [INFO]   Confusion Matrix:
+2025-05-05 23:26:41,149 [INFO] 
+[[4502  336]
+ [ 234 1388]]
+2025-05-05 23:26:41,150 [INFO] --- Fold 2 completed in 2887.31s ---
+2025-05-05 23:26:41,150 [INFO] --- Starting Fold 3/5 ---
+2025-05-05 23:26:41,285 [INFO] Using Mixed Precision (AMP) with torch.amp.GradScaler
+2025-05-05 23:26:41,285 [INFO] --- Phase 1: Training Head ---
+2025-05-05 23:28:03,216 [INFO] Fold 3 Phase 1 - Epoch 1/3, Train Loss: 0.6185, Time: 81.93s
+2025-05-05 23:29:25,306 [INFO] Fold 3 Phase 1 - Epoch 2/3, Train Loss: 0.6129, Time: 82.09s
+2025-05-05 23:30:47,356 [INFO] Fold 3 Phase 1 - Epoch 3/3, Train Loss: 0.6137, Time: 82.05s
+2025-05-05 23:30:47,356 [INFO] --- Phase 2: Fine-tuning Full Model ---
+2025-05-05 23:37:01,787 [INFO] Fold 3 Phase 2 - Epoch 1/7 (Total: 4), LR: [1e-05, 0.001], Train Loss: 0.5039, Val Loss: 0.3745, Val Acc: 0.8579, Val F1: 0.7362, Val AUC: 0.9131, Time: 374.43s
+2025-05-05 23:37:01,929 [INFO]   -> New best F1: 0.7362 at epoch 4. Checkpoint saved to models_checkpointed/best_model_fold_3.pth
+2025-05-05 23:43:16,421 [INFO] Fold 3 Phase 2 - Epoch 2/7 (Total: 5), LR: [1e-05, 0.001], Train Loss: 0.3986, Val Loss: 0.3290, Val Acc: 0.8759, Val F1: 0.7695, Val AUC: 0.9339, Time: 374.49s
+2025-05-05 23:43:16,670 [INFO]   -> New best F1: 0.7695 at epoch 5. Checkpoint saved to models_checkpointed/best_model_fold_3.pth
+2025-05-05 23:49:31,144 [INFO] Fold 3 Phase 2 - Epoch 3/7 (Total: 6), LR: [1e-05, 0.001], Train Loss: 0.3507, Val Loss: 0.3064, Val Acc: 0.8796, Val F1: 0.7802, Val AUC: 0.9433, Time: 374.47s
+2025-05-05 23:49:31,393 [INFO]   -> New best F1: 0.7802 at epoch 6. Checkpoint saved to models_checkpointed/best_model_fold_3.pth
+2025-05-05 23:55:45,828 [INFO] Fold 3 Phase 2 - Epoch 4/7 (Total: 7), LR: [1e-05, 0.001], Train Loss: 0.3285, Val Loss: 0.2981, Val Acc: 0.8731, Val F1: 0.7784, Val AUC: 0.9479, Time: 374.43s
+2025-05-05 23:55:45,828 [INFO]   -> F1 did not improve. Patience: 1/5
+2025-05-06 00:02:00,285 [INFO] Fold 3 Phase 2 - Epoch 5/7 (Total: 8), LR: [1e-05, 0.001], Train Loss: 0.3014, Val Loss: 0.2846, Val Acc: 0.8995, Val F1: 0.8111, Val AUC: 0.9538, Time: 374.46s
+2025-05-06 00:02:00,515 [INFO]   -> New best F1: 0.8111 at epoch 8. Checkpoint saved to models_checkpointed/best_model_fold_3.pth
+2025-05-06 00:08:15,045 [INFO] Fold 3 Phase 2 - Epoch 6/7 (Total: 9), LR: [1e-05, 0.001], Train Loss: 0.2849, Val Loss: 0.2896, Val Acc: 0.9073, Val F1: 0.8221, Val AUC: 0.9543, Time: 374.53s
+2025-05-06 00:08:15,290 [INFO]   -> New best F1: 0.8221 at epoch 9. Checkpoint saved to models_checkpointed/best_model_fold_3.pth
+2025-05-06 00:14:29,670 [INFO] Fold 3 Phase 2 - Epoch 7/7 (Total: 10), LR: [1e-05, 0.001], Train Loss: 0.2680, Val Loss: 0.2664, Val Acc: 0.8972, Val F1: 0.8123, Val AUC: 0.9573, Time: 374.38s
+2025-05-06 00:14:29,670 [INFO]   -> F1 did not improve. Patience: 1/5
+2025-05-06 00:14:29,670 [INFO] Loading best model from models_checkpointed/best_model_fold_3.pth (Epoch 9, F1: 0.8221)
+2025-05-06 00:14:29,925 [INFO] --- Evaluating Best Model for Fold 3 ---
+2025-05-06 00:14:48,913 [INFO] Fold 3 Final Validation Results (Best Model):
+2025-05-06 00:14:48,913 [INFO]   Accuracy:  0.9073
+2025-05-06 00:14:48,913 [INFO]   F1 Score:  0.8221
+2025-05-06 00:14:48,913 [INFO]   Precision: 0.7931
+2025-05-06 00:14:48,913 [INFO]   Recall:    0.8533
+2025-05-06 00:14:48,913 [INFO]   AUC:       0.9543
+2025-05-06 00:14:48,913 [INFO]   Loss:      0.2896
+2025-05-06 00:14:48,913 [INFO]   Confusion Matrix:
+2025-05-06 00:14:48,913 [INFO] 
+[[4477  361]
+ [ 238 1384]]
+2025-05-06 00:14:48,913 [INFO] --- Fold 3 completed in 2887.76s ---
+2025-05-06 00:14:48,914 [INFO] --- Starting Fold 4/5 ---
+2025-05-06 00:14:49,150 [INFO] Using Mixed Precision (AMP) with torch.amp.GradScaler
+2025-05-06 00:14:49,150 [INFO] --- Phase 1: Training Head ---
+2025-05-06 00:16:10,247 [INFO] Fold 4 Phase 1 - Epoch 1/3, Train Loss: 0.6224, Time: 81.10s
+2025-05-06 00:17:31,535 [INFO] Fold 4 Phase 1 - Epoch 2/3, Train Loss: 0.6133, Time: 81.29s
+2025-05-06 00:18:52,755 [INFO] Fold 4 Phase 1 - Epoch 3/3, Train Loss: 0.6126, Time: 81.22s
+2025-05-06 00:18:52,756 [INFO] --- Phase 2: Fine-tuning Full Model ---
+2025-05-06 00:25:07,144 [INFO] Fold 4 Phase 2 - Epoch 1/7 (Total: 4), LR: [1e-05, 0.001], Train Loss: 0.5153, Val Loss: 0.3791, Val Acc: 0.8582, Val F1: 0.7359, Val AUC: 0.9114, Time: 374.38s
+2025-05-06 00:25:07,288 [INFO]   -> New best F1: 0.7359 at epoch 4. Checkpoint saved to models_checkpointed/best_model_fold_4.pth
+2025-05-06 00:31:21,672 [INFO] Fold 4 Phase 2 - Epoch 2/7 (Total: 5), LR: [1e-05, 0.001], Train Loss: 0.4012, Val Loss: 0.3580, Val Acc: 0.8997, Val F1: 0.7891, Val AUC: 0.9381, Time: 374.38s
+2025-05-06 00:31:21,919 [INFO]   -> New best F1: 0.7891 at epoch 5. Checkpoint saved to models_checkpointed/best_model_fold_4.pth
+2025-05-06 00:37:36,365 [INFO] Fold 4 Phase 2 - Epoch 3/7 (Total: 6), LR: [1e-05, 0.001], Train Loss: 0.3604, Val Loss: 0.2921, Val Acc: 0.8904, Val F1: 0.7949, Val AUC: 0.9484, Time: 374.45s
+2025-05-06 00:37:36,597 [INFO]   -> New best F1: 0.7949 at epoch 6. Checkpoint saved to models_checkpointed/best_model_fold_4.pth
+2025-05-06 00:43:51,065 [INFO] Fold 4 Phase 2 - Epoch 4/7 (Total: 7), LR: [1e-05, 0.001], Train Loss: 0.3274, Val Loss: 0.2721, Val Acc: 0.8814, Val F1: 0.7922, Val AUC: 0.9561, Time: 374.47s
+2025-05-06 00:43:51,065 [INFO]   -> F1 did not improve. Patience: 1/5
+2025-05-06 00:50:05,475 [INFO] Fold 4 Phase 2 - Epoch 5/7 (Total: 8), LR: [1e-05, 0.001], Train Loss: 0.3054, Val Loss: 0.2559, Val Acc: 0.9046, Val F1: 0.8216, Val AUC: 0.9606, Time: 374.41s
+2025-05-06 00:50:05,727 [INFO]   -> New best F1: 0.8216 at epoch 8. Checkpoint saved to models_checkpointed/best_model_fold_4.pth
+2025-05-06 00:56:20,093 [INFO] Fold 4 Phase 2 - Epoch 6/7 (Total: 9), LR: [1e-05, 0.001], Train Loss: 0.2856, Val Loss: 0.2625, Val Acc: 0.9152, Val F1: 0.8340, Val AUC: 0.9618, Time: 374.37s
+2025-05-06 00:56:20,335 [INFO]   -> New best F1: 0.8340 at epoch 9. Checkpoint saved to models_checkpointed/best_model_fold_4.pth
+2025-05-06 01:02:34,857 [INFO] Fold 4 Phase 2 - Epoch 7/7 (Total: 10), LR: [1e-05, 0.001], Train Loss: 0.2661, Val Loss: 0.2552, Val Acc: 0.9227, Val F1: 0.8476, Val AUC: 0.9662, Time: 374.52s
+2025-05-06 01:02:35,105 [INFO]   -> New best F1: 0.8476 at epoch 10. Checkpoint saved to models_checkpointed/best_model_fold_4.pth
+2025-05-06 01:02:35,105 [INFO] Loading best model from models_checkpointed/best_model_fold_4.pth (Epoch 10, F1: 0.8476)
+2025-05-06 01:02:35,290 [INFO] --- Evaluating Best Model for Fold 4 ---
+2025-05-06 01:02:54,254 [INFO] Fold 4 Final Validation Results (Best Model):
+2025-05-06 01:02:54,254 [INFO]   Accuracy:  0.9227
+2025-05-06 01:02:54,254 [INFO]   F1 Score:  0.8476
+2025-05-06 01:02:54,254 [INFO]   Precision: 0.8397
+2025-05-06 01:02:54,254 [INFO]   Recall:    0.8557
+2025-05-06 01:02:54,254 [INFO]   AUC:       0.9662
+2025-05-06 01:02:54,254 [INFO]   Loss:      0.2552
+2025-05-06 01:02:54,254 [INFO]   Confusion Matrix:
+2025-05-06 01:02:54,254 [INFO] 
+[[4572  265]
+ [ 234 1388]]
+2025-05-06 01:02:54,255 [INFO] --- Fold 4 completed in 2885.34s ---
+2025-05-06 01:02:54,255 [INFO] --- Starting Fold 5/5 ---
+2025-05-06 01:02:54,395 [INFO] Using Mixed Precision (AMP) with torch.amp.GradScaler
+2025-05-06 01:02:54,395 [INFO] --- Phase 1: Training Head ---
+2025-05-06 01:04:15,970 [INFO] Fold 5 Phase 1 - Epoch 1/3, Train Loss: 0.6172, Time: 81.57s
+2025-05-06 01:05:37,669 [INFO] Fold 5 Phase 1 - Epoch 2/3, Train Loss: 0.6183, Time: 81.70s
+2025-05-06 01:06:59,492 [INFO] Fold 5 Phase 1 - Epoch 3/3, Train Loss: 0.6186, Time: 81.82s
+2025-05-06 01:06:59,492 [INFO] --- Phase 2: Fine-tuning Full Model ---
+2025-05-06 01:13:13,846 [INFO] Fold 5 Phase 2 - Epoch 1/7 (Total: 4), LR: [1e-05, 0.001], Train Loss: 0.5136, Val Loss: 0.3814, Val Acc: 0.8232, Val F1: 0.7094, Val AUC: 0.9136, Time: 374.35s
+2025-05-06 01:13:13,990 [INFO]   -> New best F1: 0.7094 at epoch 4. Checkpoint saved to models_checkpointed/best_model_fold_5.pth
+2025-05-06 01:19:28,359 [INFO] Fold 5 Phase 2 - Epoch 2/7 (Total: 5), LR: [1e-05, 0.001], Train Loss: 0.4065, Val Loss: 0.3212, Val Acc: 0.8874, Val F1: 0.7866, Val AUC: 0.9380, Time: 374.37s
+2025-05-06 01:19:28,604 [INFO]   -> New best F1: 0.7866 at epoch 5. Checkpoint saved to models_checkpointed/best_model_fold_5.pth
+2025-05-06 01:25:43,012 [INFO] Fold 5 Phase 2 - Epoch 3/7 (Total: 6), LR: [1e-05, 0.001], Train Loss: 0.3581, Val Loss: 0.2912, Val Acc: 0.8898, Val F1: 0.7966, Val AUC: 0.9485, Time: 374.41s
+2025-05-06 01:25:43,255 [INFO]   -> New best F1: 0.7966 at epoch 6. Checkpoint saved to models_checkpointed/best_model_fold_5.pth
+2025-05-06 01:31:57,833 [INFO] Fold 5 Phase 2 - Epoch 4/7 (Total: 7), LR: [1e-05, 0.001], Train Loss: 0.3272, Val Loss: 0.2762, Val Acc: 0.8792, Val F1: 0.7887, Val AUC: 0.9554, Time: 374.58s
+2025-05-06 01:31:57,834 [INFO]   -> F1 did not improve. Patience: 1/5
+2025-05-06 01:38:12,272 [INFO] Fold 5 Phase 2 - Epoch 5/7 (Total: 8), LR: [1e-05, 0.001], Train Loss: 0.3057, Val Loss: 0.2593, Val Acc: 0.9037, Val F1: 0.8217, Val AUC: 0.9602, Time: 374.44s
+2025-05-06 01:38:12,501 [INFO]   -> New best F1: 0.8217 at epoch 8. Checkpoint saved to models_checkpointed/best_model_fold_5.pth
+2025-05-06 01:44:26,962 [INFO] Fold 5 Phase 2 - Epoch 6/7 (Total: 9), LR: [1e-05, 0.001], Train Loss: 0.2824, Val Loss: 0.2525, Val Acc: 0.8977, Val F1: 0.8157, Val AUC: 0.9618, Time: 374.46s
+2025-05-06 01:44:26,962 [INFO]   -> F1 did not improve. Patience: 1/5
+2025-05-06 01:50:41,354 [INFO] Fold 5 Phase 2 - Epoch 7/7 (Total: 10), LR: [1e-05, 0.001], Train Loss: 0.2717, Val Loss: 0.2426, Val Acc: 0.9076, Val F1: 0.8291, Val AUC: 0.9647, Time: 374.39s
+2025-05-06 01:50:41,580 [INFO]   -> New best F1: 0.8291 at epoch 10. Checkpoint saved to models_checkpointed/best_model_fold_5.pth
+2025-05-06 01:50:41,580 [INFO] Loading best model from models_checkpointed/best_model_fold_5.pth (Epoch 10, F1: 0.8291)
+2025-05-06 01:50:41,762 [INFO] --- Evaluating Best Model for Fold 5 ---
+2025-05-06 01:51:00,721 [INFO] Fold 5 Final Validation Results (Best Model):
+2025-05-06 01:51:00,721 [INFO]   Accuracy:  0.9076
+2025-05-06 01:51:00,721 [INFO]   F1 Score:  0.8291
+2025-05-06 01:51:00,721 [INFO]   Precision: 0.7739
+2025-05-06 01:51:00,721 [INFO]   Recall:    0.8927
+2025-05-06 01:51:00,721 [INFO]   AUC:       0.9647
+2025-05-06 01:51:00,721 [INFO]   Loss:      0.2426
+2025-05-06 01:51:00,721 [INFO]   Confusion Matrix:
+2025-05-06 01:51:00,722 [INFO] 
+[[4414  423]
+ [ 174 1448]]
+2025-05-06 01:51:00,722 [INFO] --- Fold 5 completed in 2886.47s ---
+2025-05-06 01:51:00,722 [INFO] --- Cross-Validation Summary ---
+2025-05-06 01:51:00,722 [INFO] Mean Accuracy:  0.9111 ± 0.0061
+2025-05-06 01:51:00,722 [INFO] Mean F1 Score:  0.8311 ± 0.0087
+2025-05-06 01:51:00,722 [INFO] Mean Precision: 0.7965 ± 0.0250
+2025-05-06 01:51:00,722 [INFO] Mean Recall:    0.8699 ± 0.0184
+2025-05-06 01:51:00,723 [INFO] Mean AUC:       0.9606 ± 0.0045
+2025-05-06 01:51:00,723 [INFO] --- Training Final Model on Full Train/Val Dataset ---
+2025-05-06 01:51:00,830 [INFO] --- Final Model - Phase 1: Training Head ---
+2025-05-06 01:52:42,390 [INFO] Final Phase 1 - Epoch 1/3, Train Loss: 0.6139, Time: 101.56s
+2025-05-06 01:54:24,067 [INFO] Final Phase 1 - Epoch 2/3, Train Loss: 0.6118, Time: 101.68s
+2025-05-06 01:56:05,723 [INFO] Final Phase 1 - Epoch 3/3, Train Loss: 0.6121, Time: 101.66s
+2025-05-06 01:56:05,723 [INFO] --- Final Model - Phase 2: Fine-tuning Full Model ---
+2025-05-06 02:03:30,044 [INFO] Final Phase 2 - Epoch 1/7, Train Loss: 0.5007, Time: 444.32s
+2025-05-06 02:10:54,367 [INFO] Final Phase 2 - Epoch 2/7, Train Loss: 0.3874, Time: 444.32s
+2025-05-06 02:18:18,605 [INFO] Final Phase 2 - Epoch 3/7, Train Loss: 0.3396, Time: 444.24s
+2025-05-06 02:25:42,862 [INFO] Final Phase 2 - Epoch 4/7, Train Loss: 0.3092, Time: 444.26s
+2025-05-06 02:33:07,293 [INFO] Final Phase 2 - Epoch 5/7, Train Loss: 0.2874, Time: 444.43s
+2025-05-06 02:40:31,607 [INFO] Final Phase 2 - Epoch 6/7, Train Loss: 0.2673, Time: 444.31s
+2025-05-06 02:47:56,014 [INFO] Final Phase 2 - Epoch 7/7, Train Loss: 0.2550, Time: 444.41s
+2025-05-06 02:47:56,130 [INFO] Final model state_dict saved to models_checkpointed/efficientnetb0_fer2013_happy_final.pth
+2025-05-06 02:47:56,130 [INFO] --- Evaluating Final Model on PrivateTest Set ---
+2025-05-06 02:47:56,308 [INFO] Successfully loaded final model from models_checkpointed/efficientnetb0_fer2013_happy_final.pth
+2025-05-06 02:48:07,005 [INFO] Final Test Set Results:
+2025-05-06 02:48:07,005 [INFO]   Accuracy:  0.9195
+2025-05-06 02:48:07,005 [INFO]   F1 Score:  0.8459
+2025-05-06 02:48:07,005 [INFO]   Precision: 0.7962
+2025-05-06 02:48:07,005 [INFO]   Recall:    0.9022
+2025-05-06 02:48:07,005 [INFO]   AUC:       0.9695
+2025-05-06 02:48:07,006 [INFO]   Loss:      0.2284
+2025-05-06 02:48:07,006 [INFO]   Confusion Matrix:
+2025-05-06 02:48:07,006 [INFO] 
+[[2507  203]
+ [  86  793]]
+2025-05-06 02:48:07,006 [INFO]   Classification Report:
+2025-05-06 02:48:07,013 [INFO] 
+              precision    recall  f1-score   support
+
+   Not Happy       0.97      0.93      0.95      2710
+       Happy       0.80      0.90      0.85       879
+
+    accuracy                           0.92      3589
+   macro avg       0.88      0.91      0.90      3589
+weighted avg       0.93      0.92      0.92      3589
+
+2025-05-06 02:48:07,013 [INFO] --- Optimization Notes ---
+2025-05-06 02:48:07,013 [INFO] The saved final model is a standard PyTorch state dictionary.
+2025-05-06 02:48:07,013 [INFO] For near real-time performance as discussed in the methodology,
+2025-05-06 02:48:07,013 [INFO] further optimization steps like conversion to ONNX, TensorRT, or OpenVINO,
+2025-05-06 02:48:07,013 [INFO] and potentially quantization, would be necessary after training.
+2025-05-06 02:48:07,013 [INFO] --- Script Finished ---
