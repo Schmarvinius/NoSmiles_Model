@@ -1,4 +1,5 @@
 datasets/
 .venv/
-.csv
+*.csv
 fer2013.csv
+*.pth

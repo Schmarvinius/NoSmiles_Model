@@ -1,0 +1,100 @@
+2025-05-10 12:10:28,619 [INFO] Logging to console and training_log.log
+2025-05-10 12:10:28,626 [INFO] Random seed set to 42
+2025-05-10 12:10:28,627 [INFO] --- Hyperparameters ---
+2025-05-10 12:10:28,628 [INFO] Base Model: VGG11
+2025-05-10 12:10:28,629 [INFO] Batch Size: 16
+2025-05-10 12:10:28,629 [INFO] Epochs Phase 1 (Head Training): 7
+2025-05-10 12:10:28,630 [INFO] Epochs Phase 2 (Full Model Fine-tuning): 20
+2025-05-10 12:10:28,630 [INFO] K-Folds for Cross-Validation: 5
+2025-05-10 12:10:28,630 [INFO] Learning Rate (Head): 0.001
+2025-05-10 12:10:28,631 [INFO] Learning Rate (Backbone): 1e-05
+2025-05-10 12:10:28,631 [INFO] Weight Decay: 0.01
+2025-05-10 12:10:28,632 [INFO] Scheduler Patience: 3
+2025-05-10 12:10:28,632 [INFO] Scheduler Factor: 0.1
+2025-05-10 12:10:28,632 [INFO] Early Stopping Patience: 7
+2025-05-10 12:10:28,633 [INFO] Dropout Rate: 0.5
+2025-05-10 12:10:28,633 [INFO] Random Seed: 42
+2025-05-10 12:10:28,633 [INFO] AMP (Mixed Precision): False
+2025-05-10 12:10:28,634 [INFO] -----------------------
+2025-05-10 12:10:28,644 [INFO] Loading data from ../../datasets/fer2013/
+2025-05-10 12:10:29,391 [INFO] Loaded 28709 samples for Training/Validation
+2025-05-10 12:10:29,391 [INFO] Loaded 7178 samples for Final Testing
+2025-05-10 12:10:29,398 [INFO] Class counts (Train/Val): {0: 21494, 1: 7215}
+2025-05-10 12:10:29,400 [INFO] Calculated class weights: [0.66783756 1.9895357 ]
+2025-05-10 12:10:29,432 [INFO] Using device: mps
+2025-05-10 12:10:29,433 [INFO] Using 0 workers for DataLoaders
+2025-05-10 12:10:29,439 [INFO] --- Starting Fold 1/5 ---
+2025-05-10 12:10:29,441 [INFO] Initializing VGG11 model.
+2025-05-10 12:10:30,181 [INFO] Adjusted VGG11's existing dropout rates at classifier indices [2, 5] to 0.5
+2025-05-10 12:10:30,182 [INFO] Replaced final layer of VGG11 (classifier[6]) for 2 output classes.
+2025-05-10 12:10:30,896 [INFO] --- Phase 1: Training Head ---
+2025-05-10 12:17:51,132 [INFO] Fold 1 Phase 1 - Epoch 1/7, Train Loss: 0.6910, Time: 440.23s
+2025-05-10 12:25:28,734 [INFO] Fold 1 Phase 1 - Epoch 2/7, Train Loss: 0.5051, Time: 457.60s
+2025-05-10 12:32:30,416 [INFO] Fold 1 Phase 1 - Epoch 3/7, Train Loss: 0.5355, Time: 421.68s
+2025-05-10 12:51:05,190 [INFO] Fold 1 Phase 1 - Epoch 4/7, Train Loss: 0.7181, Time: 1114.77s
+2025-05-10 12:58:05,442 [INFO] Fold 1 Phase 1 - Epoch 5/7, Train Loss: 0.5438, Time: 420.25s
+2025-05-10 13:05:22,215 [INFO] Fold 1 Phase 1 - Epoch 6/7, Train Loss: 0.5030, Time: 436.77s
+2025-05-10 13:11:57,887 [INFO] Fold 1 Phase 1 - Epoch 7/7, Train Loss: 0.4509, Time: 395.67s
+2025-05-10 13:11:57,890 [INFO] --- Phase 2: Fine-tuning Full Model ---
+2025-05-10 13:25:45,026 [INFO] Fold 1 Phase 2 - Epoch 1/20 (Total: 8), LR: [1e-05, 0.001], Train Loss: 0.5128, Val Loss: 0.3788, Val Acc: 0.8718, Val F1: 0.7102, Val AUC: 0.8871, Time: 827.11s
+2025-05-10 13:25:47,857 [INFO]   -> New best F1: 0.7102 at epoch 8. Checkpoint saved to models_checkpointed/best_model_fold_1.pth
+2025-05-10 13:40:34,679 [INFO] Fold 1 Phase 2 - Epoch 2/20 (Total: 9), LR: [1e-05, 0.001], Train Loss: 0.4243, Val Loss: 0.3444, Val Acc: 0.8649, Val F1: 0.7487, Val AUC: 0.9154, Time: 886.82s
+2025-05-10 13:40:37,271 [INFO]   -> New best F1: 0.7487 at epoch 9. Checkpoint saved to models_checkpointed/best_model_fold_1.pth
+2025-05-10 13:54:36,550 [INFO] Fold 1 Phase 2 - Epoch 3/20 (Total: 10), LR: [1e-05, 0.001], Train Loss: 0.3520, Val Loss: 0.2646, Val Acc: 0.8992, Val F1: 0.7836, Val AUC: 0.9400, Time: 839.27s
+2025-05-10 13:54:39,494 [INFO]   -> New best F1: 0.7836 at epoch 10. Checkpoint saved to models_checkpointed/best_model_fold_1.pth
+2025-05-10 14:08:52,049 [INFO] Fold 1 Phase 2 - Epoch 4/20 (Total: 11), LR: [1e-05, 0.001], Train Loss: 0.3186, Val Loss: 0.2728, Val Acc: 0.9021, Val F1: 0.8040, Val AUC: 0.9404, Time: 852.55s
+2025-05-10 14:08:54,864 [INFO]   -> New best F1: 0.8040 at epoch 11. Checkpoint saved to models_checkpointed/best_model_fold_1.pth
+2025-05-10 14:22:58,276 [INFO] Fold 1 Phase 2 - Epoch 5/20 (Total: 12), LR: [1e-05, 0.001], Train Loss: 0.2933, Val Loss: 0.2940, Val Acc: 0.8974, Val F1: 0.8050, Val AUC: 0.9441, Time: 843.40s
+2025-05-10 14:23:01,561 [INFO]   -> New best F1: 0.8050 at epoch 12. Checkpoint saved to models_checkpointed/best_model_fold_1.pth
+2025-05-10 14:37:17,310 [INFO] Fold 1 Phase 2 - Epoch 6/20 (Total: 13), LR: [1e-05, 0.001], Train Loss: 0.2881, Val Loss: 0.2675, Val Acc: 0.9053, Val F1: 0.8033, Val AUC: 0.9412, Time: 855.74s
+2025-05-10 14:37:17,312 [INFO]   -> F1 did not improve. Patience: 1/7
+2025-05-10 14:51:04,725 [INFO] Fold 1 Phase 2 - Epoch 7/20 (Total: 14), LR: [1e-05, 0.001], Train Loss: 0.2678, Val Loss: 0.2932, Val Acc: 0.8922, Val F1: 0.8036, Val AUC: 0.9498, Time: 827.41s
+2025-05-10 14:51:04,729 [INFO]   -> F1 did not improve. Patience: 2/7
+2025-05-10 15:04:32,767 [INFO] Fold 1 Phase 2 - Epoch 8/20 (Total: 15), LR: [1.0000000000000002e-06, 0.0001], Train Loss: 0.2378, Val Loss: 0.2519, Val Acc: 0.9121, Val F1: 0.8268, Val AUC: 0.9526, Time: 808.04s
+2025-05-10 15:04:35,776 [INFO]   -> New best F1: 0.8268 at epoch 15. Checkpoint saved to models_checkpointed/best_model_fold_1.pth
+2025-05-10 15:18:53,905 [INFO] Fold 1 Phase 2 - Epoch 9/20 (Total: 16), LR: [1.0000000000000002e-06, 0.0001], Train Loss: 0.2251, Val Loss: 0.2439, Val Acc: 0.9164, Val F1: 0.8317, Val AUC: 0.9529, Time: 858.12s
+2025-05-10 15:18:57,044 [INFO]   -> New best F1: 0.8317 at epoch 16. Checkpoint saved to models_checkpointed/best_model_fold_1.pth
+2025-05-10 15:32:27,174 [INFO] Fold 1 Phase 2 - Epoch 10/20 (Total: 17), LR: [1.0000000000000002e-06, 0.0001], Train Loss: 0.2194, Val Loss: 0.2443, Val Acc: 0.9136, Val F1: 0.8278, Val AUC: 0.9525, Time: 810.12s
+2025-05-10 15:32:27,177 [INFO]   -> F1 did not improve. Patience: 1/7
+2025-05-10 15:45:55,476 [INFO] Fold 1 Phase 2 - Epoch 11/20 (Total: 18), LR: [1.0000000000000002e-06, 0.0001], Train Loss: 0.2091, Val Loss: 0.2487, Val Acc: 0.9152, Val F1: 0.8292, Val AUC: 0.9528, Time: 808.30s
+2025-05-10 15:45:55,478 [INFO]   -> F1 did not improve. Patience: 2/7
+2025-05-10 16:00:31,476 [INFO] Fold 1 Phase 2 - Epoch 12/20 (Total: 19), LR: [1.0000000000000002e-06, 0.0001], Train Loss: 0.2112, Val Loss: 0.2410, Val Acc: 0.9148, Val F1: 0.8298, Val AUC: 0.9536, Time: 876.00s
+2025-05-10 16:00:31,479 [INFO]   -> F1 did not improve. Patience: 3/7
+2025-05-10 16:14:40,707 [INFO] Fold 1 Phase 2 - Epoch 13/20 (Total: 20), LR: [1.0000000000000002e-06, 0.0001], Train Loss: 0.2022, Val Loss: 0.2507, Val Acc: 0.9159, Val F1: 0.8332, Val AUC: 0.9530, Time: 849.23s
+2025-05-10 16:14:43,649 [INFO]   -> New best F1: 0.8332 at epoch 20. Checkpoint saved to models_checkpointed/best_model_fold_1.pth
+2025-05-10 16:28:34,470 [INFO] Fold 1 Phase 2 - Epoch 14/20 (Total: 21), LR: [1.0000000000000002e-06, 0.0001], Train Loss: 0.2028, Val Loss: 0.2444, Val Acc: 0.9162, Val F1: 0.8316, Val AUC: 0.9532, Time: 830.80s
+2025-05-10 16:28:34,473 [INFO]   -> F1 did not improve. Patience: 1/7
+2025-05-10 16:42:23,243 [INFO] Fold 1 Phase 2 - Epoch 15/20 (Total: 22), LR: [1.0000000000000002e-06, 0.0001], Train Loss: 0.1983, Val Loss: 0.2496, Val Acc: 0.9154, Val F1: 0.8330, Val AUC: 0.9533, Time: 828.77s
+2025-05-10 16:42:23,246 [INFO]   -> F1 did not improve. Patience: 2/7
+2025-05-10 16:56:19,708 [INFO] Fold 1 Phase 2 - Epoch 16/20 (Total: 23), LR: [1.0000000000000002e-06, 0.0001], Train Loss: 0.1984, Val Loss: 0.2471, Val Acc: 0.9164, Val F1: 0.8305, Val AUC: 0.9520, Time: 836.46s
+2025-05-10 16:56:19,712 [INFO]   -> F1 did not improve. Patience: 3/7
+2025-05-10 17:10:33,240 [INFO] Fold 1 Phase 2 - Epoch 17/20 (Total: 24), LR: [1.0000000000000002e-07, 1e-05], Train Loss: 0.1981, Val Loss: 0.2472, Val Acc: 0.9141, Val F1: 0.8289, Val AUC: 0.9524, Time: 853.53s
+2025-05-10 17:10:33,244 [INFO]   -> F1 did not improve. Patience: 4/7
+2025-05-10 17:24:36,746 [INFO] Fold 1 Phase 2 - Epoch 18/20 (Total: 25), LR: [1.0000000000000002e-07, 1e-05], Train Loss: 0.1923, Val Loss: 0.2480, Val Acc: 0.9148, Val F1: 0.8299, Val AUC: 0.9521, Time: 843.50s
+2025-05-10 17:24:36,749 [INFO]   -> F1 did not improve. Patience: 5/7
+2025-05-10 17:38:21,530 [INFO] Fold 1 Phase 2 - Epoch 19/20 (Total: 26), LR: [1.0000000000000002e-07, 1e-05], Train Loss: 0.1911, Val Loss: 0.2491, Val Acc: 0.9154, Val F1: 0.8303, Val AUC: 0.9520, Time: 824.78s
+2025-05-10 17:38:21,532 [INFO]   -> F1 did not improve. Patience: 6/7
+2025-05-10 17:57:43,873 [INFO] Fold 1 Phase 2 - Epoch 20/20 (Total: 27), LR: [1.0000000000000002e-07, 1e-05], Train Loss: 0.1875, Val Loss: 0.2506, Val Acc: 0.9148, Val F1: 0.8299, Val AUC: 0.9519, Time: 1162.34s
+2025-05-10 17:57:43,876 [INFO]   -> F1 did not improve. Patience: 7/7
+2025-05-10 17:57:43,878 [INFO]   -> Early stopping triggered at epoch 27.
+2025-05-10 17:57:43,880 [INFO] Loading best model from models_checkpointed/best_model_fold_1.pth (Epoch 20, F1: 0.8332)
+2025-05-10 17:57:45,185 [INFO] --- Evaluating Best Model for Fold 1 ---
+2025-05-10 17:58:24,407 [INFO] Fold 1 Final Validation Results (Best Model):
+2025-05-10 17:58:24,409 [INFO]   Accuracy:  0.9159
+2025-05-10 17:58:24,411 [INFO]   F1 Score:  0.8332
+2025-05-10 17:58:24,412 [INFO]   Precision: 0.8306
+2025-05-10 17:58:24,414 [INFO]   Recall:    0.8358
+2025-05-10 17:58:24,415 [INFO]   AUC:       0.9530
+2025-05-10 17:58:24,417 [INFO]   Loss:      0.2507
+2025-05-10 17:58:24,418 [INFO]   Confusion Matrix:
+2025-05-10 17:58:24,422 [INFO] 
+[[4053  246]
+ [ 237 1206]]
+2025-05-10 17:58:24,424 [INFO] --- Fold 1 completed in 20874.98s ---
+2025-05-10 17:58:24,429 [INFO] --- Starting Fold 2/5 ---
+2025-05-10 17:58:24,453 [INFO] Initializing VGG11 model.
+2025-05-10 17:58:25,357 [INFO] Adjusted VGG11's existing dropout rates at classifier indices [2, 5] to 0.5
+2025-05-10 17:58:25,361 [INFO] Replaced final layer of VGG11 (classifier[6]) for 2 output classes.
+2025-05-10 17:58:25,635 [INFO] --- Phase 1: Training Head ---
+2025-05-10 18:05:26,265 [INFO] Fold 2 Phase 1 - Epoch 1/7, Train Loss: 0.6941, Time: 420.62s
+2025-05-10 18:12:17,236 [INFO] Fold 2 Phase 1 - Epoch 2/7, Train Loss: 0.5799, Time: 410.97s
